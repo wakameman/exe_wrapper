@@ -4,7 +4,7 @@ Add-Type -AssemblyName System.Drawing
 $configPath = Join-Path -Path (Split-Path -Parent $MyInvocation.MyCommand.Definition) -ChildPath "config.json"
 
 if (-Not (Test-Path $configPath)) {
-    [System.Windows.Forms.MessageBox]::Show("confg.json not found.�B`n$configPath", "error", [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Error)
+    [System.Windows.Forms.MessageBox]::Show("confg.json not found. $configPath", "error", [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Error)
     exit
 }
 
